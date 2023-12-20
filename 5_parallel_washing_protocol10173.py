@@ -15,8 +15,8 @@ fr_cmdInt = frame.fr_cmdInt
 #parameter
 milliGAT_I=milliGATFn()
 milliGAT_J=milliGATFn()
-milliGAT_U=milliGATFn()
-milliGAT_V=milliGATFn()
+milliGAT_G=milliGATFn()
+milliGAT_H=milliGATFn()
 milliGAT_L=milliGATFn()
 valve_1=valveFn()
 valve_2=valveFn()
