@@ -82,52 +82,57 @@ def autoprog_start():
     valve_2.valve_go(0, 4, lbl_25)
     valve_1.valve_go(120, 13, lbl_26) # DCM wash
     valve_2.valve_go(0, 12, lbl_27)
-    valve_1.valve_go(20, 11, lbl_28) # MeOH wash
-    valve_1.valve_go(20, 12, lbl_29) # DMF wash
-    valve_1.valve_go(20, 5, lbl_30) # 5: oxidation
-    valve_2.valve_go(0, 5, lbl_31)
-    valve_1.valve_go(240, 12, lbl_32) # DMF wash
-    valve_2.valve_go(0, 12, lbl_33)
-    valve_1.valve_go(20, 13, lbl_34) # DCM wash
-    valve_1.valve_go(20, 6, lbl_35) # 6: 3-PCR
-    valve_2.valve_go(0, 6, lbl_36)
-    valve_1.valve_go(360, 12, lbl_37) # DMF wash
+    milliGAT_G.milliGAT_pumping('G', 20, 5000, lbl_28) # change flow rate
+    milliGAT_H.milliGAT_pumping('H', 0, 5000, lbl_29)
+    milliGAT_I.milliGAT_pumping('I', 0, 5000, lbl_30)
+    milliGAT_J.milliGAT_pumping('J', 0, 5000, lbl_31)
+    milliGAT_L.milliGAT_pumping('L', 0, 5000, lbl_32)
+    valve_1.valve_go(20, 11, lbl_33) # MeOH wash
+    valve_1.valve_go(20, 12, lbl_34) # DMF wash
+    valve_1.valve_go(20, 5, lbl_35) # 5: oxidation
+    valve_2.valve_go(0, 5, lbl_36)
+    valve_1.valve_go(240, 12, lbl_37) # DMF wash
     valve_2.valve_go(0, 12, lbl_38)
-    valve_1.valve_go(20, 2, lbl_39) # 2: piperidine
-    valve_2.valve_go(0, 2, lbl_40)
-    valve_1.valve_go(20, 12, lbl_41) # DMF wash
-    valve_2.valve_go(0, 12, lbl_42)
-    valve_1.valve_go(20, 7, lbl_43) # 7: HATU 2nd coupling
-    valve_2.valve_go(0, 7, lbl_44)
-    valve_1.valve_go(360, 12, lbl_45) # DMF wash
-    valve_2.valve_go(0, 12, lbl_46)
-    valve_1.valve_go(20, 2, lbl_47) # 2: piperidine
-    valve_2.valve_go(0, 2, lbl_48)
-    valve_1.valve_go(20, 13, lbl_49) # DCM wash
-    valve_2.valve_go(0, 12, lbl_50)
-    valve_1.valve_go(20, 8, lbl_51) # 8: EDCI 3rd coupling
-    valve_2.valve_go(0, 8, lbl_52)    
-    valve_1.valve_go(120, 13, lbl_53) # DCM wash
-    valve_2.valve_go(0, 12, lbl_54)
-    valve_1.valve_go(20, 14, lbl_55) # H2O/MeOH/THF wash
-    valve_1.valve_go(20, 9, lbl_56) # 9: NaOH hydrolysis
-    valve_2.valve_go(0, 9, lbl_57)
-    valve_1.valve_go(120, 11, lbl_58) # MeOH wash
+    valve_1.valve_go(20, 13, lbl_39) # DCM wash
+    valve_1.valve_go(20, 6, lbl_40) # 6: 3-PCR
+    valve_2.valve_go(0, 6, lbl_41)
+    valve_1.valve_go(360, 12, lbl_42) # DMF wash
+    valve_2.valve_go(0, 12, lbl_43)
+    valve_1.valve_go(20, 2, lbl_44) # 2: piperidine
+    valve_2.valve_go(0, 2, lbl_45)
+    valve_1.valve_go(20, 12, lbl_46) # DMF wash
+    valve_2.valve_go(0, 12, lbl_47)
+    valve_1.valve_go(20, 7, lbl_48) # 7: HATU 2nd coupling
+    valve_2.valve_go(0, 7, lbl_49)
+    valve_1.valve_go(360, 12, lbl_50) # DMF wash
+    valve_2.valve_go(0, 12, lbl_51)
+    valve_1.valve_go(20, 2, lbl_52) # 2: piperidine
+    valve_2.valve_go(0, 2, lbl_53)
+    valve_1.valve_go(20, 13, lbl_54) # DCM wash
+    valve_2.valve_go(0, 12, lbl_55)
+    valve_1.valve_go(20, 8, lbl_56) # 8: EDCI 3rd coupling
+    valve_2.valve_go(0, 8, lbl_57)    
+    valve_1.valve_go(120, 13, lbl_58) # DCM wash
     valve_2.valve_go(0, 12, lbl_59)
-    valve_1.valve_go(20, 12, lbl_60) # DMF wash
-    valve_1.valve_go(20, 5, lbl_61) # 5: oxidation
-    valve_2.valve_go(0, 5, lbl_62)
-    valve_1.valve_go(240, 12, lbl_63) # DMF wash
+    valve_1.valve_go(20, 14, lbl_60) # H2O/MeOH/THF wash
+    valve_1.valve_go(20, 9, lbl_61) # 9: NaOH hydrolysis
+    valve_2.valve_go(0, 9, lbl_62)
+    valve_1.valve_go(120, 11, lbl_63) # MeOH wash
     valve_2.valve_go(0, 12, lbl_64)
-    valve_1.valve_go(20, 13, lbl_65) # DCM wash
-    valve_1.valve_go(20, 10, lbl_66) # 10: TFA cleavage
-    valve_2.valve_go(0, 10, lbl_67)
-    valve_1.valve_go(360, 13, lbl_68) # DCM flush
-    milliGAT_G.milliGAT_stoping('G', 10, lbl_69)
-    milliGAT_H.milliGAT_stoping('H', 0, lbl_70)
-    milliGAT_I.milliGAT_stoping('I', 0, lbl_71)
-    milliGAT_J.milliGAT_stoping('J', 0, lbl_72)
-    milliGAT_L.milliGAT_stoping('L', 0, lbl_73)
+    valve_1.valve_go(20, 12, lbl_65) # DMF wash
+    valve_1.valve_go(20, 5, lbl_66) # 5: oxidation
+    valve_2.valve_go(0, 5, lbl_67)
+    valve_1.valve_go(240, 12, lbl_68) # DMF wash
+    valve_2.valve_go(0, 12, lbl_69)
+    valve_1.valve_go(20, 13, lbl_70) # DCM wash
+    valve_1.valve_go(20, 10, lbl_71) # 10: TFA cleavage
+    valve_2.valve_go(0, 10, lbl_72)
+    valve_1.valve_go(360, 13, lbl_73) # DCM flush
+    milliGAT_G.milliGAT_stoping('G', 10, lbl_74)
+    milliGAT_H.milliGAT_stoping('H', 0, lbl_75)
+    milliGAT_I.milliGAT_stoping('I', 0, lbl_76)
+    milliGAT_J.milliGAT_stoping('J', 0, lbl_77)
+    milliGAT_L.milliGAT_stoping('L', 0, lbl_78)
     autoprog_abort()
 #endcmd
 #abort
